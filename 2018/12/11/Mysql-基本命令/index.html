@@ -1,71 +1,562 @@
 <!DOCTYPE html>
 <html>
-
 <head><meta name="generator" content="Hexo 3.8.0">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#f8f9fa">
-        <!--[if IE]><link rel="icon" href="//favicon.ico"><![endif]-->
-        <link rel="alternate" href="/api/atom.xml" type="application/atom+xml" title="Atom">
-        <title>Loading...</title>
-        <link href="https://unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://unpkg.com/@fortawesome/fontawesome-free@5.3.1/css/all.min.css" rel="stylesheet">
-        <script src="https://unpkg.com/gitalk@1.4.0/dist/gitalk.min.js"> </script> <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js">
-        </script> <script src="https://unpkg.com/mathjax@2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script src="https://unpkg.com/moment@2.22.2/min/moment.min.js"> </script> <link href="https://unpkg.com/TagCloud@1.2.0/dist/tagcloud.css" rel="stylesheet"><script src="https://unpkg.com/TagCloud@1.2.0/dist/tagcloud.js"></script>
-        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js"> </script> <link href="https://unpkg.com/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css" rel="stylesheet"><script src="https://unpkg.com/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.js"></script>
-        <link href="https://unpkg.com/dplayer@1.25.0/dist/DPlayer.min.css" rel="prefetch" as="style">
-        <link href="https://unpkg.com/dplayer@1.25.0/dist/DPlayer.min.css" rel="stylesheet">
-        <link href="https://unpkg.com/dplayer@1.25.0/dist/DPlayer.min.js" rel="preload" as="script">
-        <script src="https://unpkg.com/dplayer@1.25.0/dist/DPlayer.min.js"> </script> <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js">
-        </script> <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.min.js"> </script> <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.min.js">
-                </script> <link href="https://unpkg.com/bootstrap-vue@2.0.0-rc.11/dist/bootstrap-vue.min.css" rel="stylesheet"><script src="https://unpkg.com/bootstrap-vue@2.0.0-rc.11/dist/bootstrap-vue.min.js"></script>
-        <link href="/css/404.5818c96b.css" rel="prefetch">
-        <link href="/css/archives.48a2a80d.css" rel="prefetch">
-        <link href="/css/chunk-048a6100.30650593.css" rel="prefetch">
-        <link href="/css/home.70239259.css" rel="prefetch">
-        <link href="/css/pages.55c53c65.css" rel="prefetch">
-        <link href="/js/404.fc83aa33.js" rel="prefetch">
-        <link href="/js/archives.2c9c2d63.js" rel="prefetch">
-        <link href="/js/chunk-048a6100.d9d4777a.js" rel="prefetch">
-        <link href="/js/chunk-2d0ae9a5.e44676a5.js" rel="prefetch">
-        <link href="/js/chunk-2d0d3114.df9e77b0.js" rel="prefetch">
-        <link href="/js/chunk-2d0d3fd5.d0023fd6.js" rel="prefetch">
-        <link href="/js/chunk-2d216c2f.ead8804b.js" rel="prefetch">
-        <link href="/js/home.e0180068.js" rel="prefetch">
-        <link href="/js/pages.888e13b7.js" rel="prefetch">
-        <link href="/js/related.5f45b55b.js" rel="prefetch">
-        <link href="/js/tags.1ba072af.js" rel="prefetch">
-        <link href="/css/app.6562d8db.css" rel="preload" as="style">
-        <link href="/js/app.cc375f1b.js" rel="preload" as="script">
-        <link href="/js/chunk-vendors.cfde5b22.js" rel="preload" as="script">
-        <link href="/css/app.6562d8db.css" rel="stylesheet">
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"> <link rel="manifest" href="/manifest.json"> <meta name="theme-color" content="#4DBA87">
-        <meta name="apple-mobile-web-app-capable" content="no">
-        <meta name="apple-mobile-web-app-status-bar-style" content="default">
-        <meta name="apple-mobile-web-app-title" content="hexo-theme-amber">
-        <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"> <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87">
-        <meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"> <meta name="msapplication-TileColor" content="#000000">
-</head>
+  <meta charset="utf-8">
+  
+  <title>Mysql 基本命令 | Kxvz Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Kxvz,Kxvz's Blog,Loyom,x-ai">
+  
+  <meta name="description" content="启动：net start mySql;   进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;   列出数据库：show databases;   选择数据库：use databaseName;   列出表格：show tables；   显示表格列的属性：show columns from tableName；   建立">
+<meta name="keywords" content="mysql,cmd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql 基本命令">
+<meta property="og:url" content="http://blog.loyom.com/2018/12/11/Mysql-基本命令/index.html">
+<meta property="og:site_name" content="Kxvz Blog">
+<meta property="og:description" content="启动：net start mySql;   进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;   列出数据库：show databases;   选择数据库：use databaseName;   列出表格：show tables；   显示表格列的属性：show columns from tableName；   建立">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-12-11T10:06:07.389Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mysql 基本命令">
+<meta name="twitter:description" content="启动：net start mySql;   进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;   列出数据库：show databases;   选择数据库：use databaseName;   列出表格：show tables；   显示表格列的属性：show columns from tableName；   建立">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
 
-<body><noscript>
-                <main role="main" class="container">
-                        <h1 class="mt-5"><img src="/img/javascript.png" width="140">Enable JavaScript</h1>
-                        <p class="lead">We're sorry but this blog doesn't work properly without JavaScript enabled.
-                                Please enable it to continue.</p>
-                </main>
-        </noscript>
-        <div id="app"><img src="/img/loading.gif" class="rubik">
-                <style>
-                        .rubik {
-                                width: 64px;
-                                height: 64px;
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                transform: translate(-50%, -50%);
-                        }
-                </style>
+  
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?falsebc3eaaa3ea410e217ab736a3a4fd221d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+  
+  <div style="display: none;">
+    <script src="//s22.cnzz.com/z_stat.php?id=1260931927&web_id=1260931927" language="JavaScript"></script>
+  </div>
+
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Kxvz&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
-        <script src="/js/chunk-vendors.cfde5b22.js"> </script> <script src="/js/app.cc375f1b.js"> </script> </body> </html>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Kxvz&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个平常的码农...
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="LOYOM" target="_blank" href="//kxvz.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/KevinAtlans">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="OSChina" target="_blank" href="https://my.oschina.net/Kxvz">
+                            <i class="fa fa-oschina fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Mysql-基本命令" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+  
+    <h1 class="post-title" itemprop="name">
+      Mysql 基本命令
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/mysql/">mysql</a>
+                  
+                      <a href="/categories/cmd/">cmd</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-12-11
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+            
+        </header>
+        
+        <div class="article-entry post-content" itemprop="articleBody">
+            
+            
+            <p>启动：net start mySql;</p>
+<p>  进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;</p>
+<p>  列出数据库：show databases;</p>
+<p>  选择数据库：use databaseName;</p>
+<p>  列出表格：show tables；</p>
+<p>  显示表格列的属性：show columns from tableName；</p>
+<p>  建立数据库：source fileName.txt;</p>
+<p>  匹配字符：可以用通配符_代表任何一个字符，％代表任何字符串;</p>
+<p>  增加一个字段：alter table tabelName add column fieldName dateType;</p>
+<p>  增加多个字段：alter table tabelName add column fieldName1 dateType,add columns fieldName2 dateType;</p>
+<p>  多行命令输入:注意不能将单词断开;当插入或更改数据时，不能将字段的字符串展开到多行里，否则硬回车将被储存到数据中;</p>
+<p>  增加一个管理员帐户：grant all on <em>.</em> to user@localhost identified by “password”;</p>
+<p>  每条语句输入完毕后要在末尾填加分号’;’，或者填加’\g’也可以；</p>
+<p>  查询时间：select now();</p>
+<p>  查询当前用户：select user();</p>
+<p>  查询数据库版本：select version();</p>
+<p>  查询当前使用的数据库：select database();</p>
+<p>  1、删除student_course数据库中的students数据表：</p>
+<p>  rm -f student_course/students.*</p>
+<p>  2、备份数据库：(将数据库test备份)</p>
+<p>  mysqldump -u root -p test&gt;c:\test.txt</p>
+<p>  备份表格：(备份test数据库下的mytable表格)</p>
+<p>  mysqldump -u root -p test mytable&gt;c:\test.txt</p>
+<p>  将备份数据导入到数据库：(导回test数据库)</p>
+<p>  mysql -u root -p test</p>
+<p>  3、创建临时表：(建立临时表zengchao)</p>
+<p>  create temporary table zengchao(name varchar(10));</p>
+<p>  4、创建表是先判断表是否存在</p>
+<p>  create table if not exists students(……);</p>
+<p>  5、从已经有的表中复制表的结构</p>
+<p>  create table table2 select * from table1 where 1&lt;&gt;1;</p>
+<p>  6、复制表</p>
+<p>  create table table2 select * from table1;</p>
+<p>  7、对表重新命名</p>
+<p>  alter table table1 rename as table2;</p>
+<p>  8、修改列的类型</p>
+<p>  alter table table1 modify id int unsigned;//修改列id的类型为int unsigned</p>
+<p>  alter table table1 change id sid int unsigned;//修改列id的名字为sid，而且把属性修改为int unsigned</p>
+<p>  9、创建索引</p>
+<p>  alter table table1 add index ind_id (id);</p>
+<p>  create index ind_id on table1 (id);</p>
+<p>  create unique index ind_id on table1 (id);//建立唯一性索引</p>
+<p>  10、删除索引</p>
+<p>  drop index idx_id on table1;</p>
+<p>  alter table table1 drop index ind_id;</p>
+<p>  11、联合字符或者多个列(将列id与”:”和列name和”=”连接)</p>
+<p>  select concat(id,’:’,name,’=’) from students;</p>
+<p>  12、limit(选出10到20条)&lt;第一个记录集的编号是0&gt;</p>
+<p>  select * from students order by id limit 9,10;</p>
+<p>  13、MySQL不支持的功能</p>
+<p>  事务，视图，外键和引用完整性，存储过程和触发器</p>
+<p>  14、MySQL会使用索引的操作符号</p>
+<p>  &lt;,&lt;=,&gt;=,&gt;,=,between,in,不带%或者_开头的like</p>
+<p>  15、使用索引的缺点</p>
+<p>  1)减慢增删改数据的速度；</p>
+<p>  2）占用磁盘空间；</p>
+<p>  3）增加查询优化器的负担；</p>
+<p>  当查询优化器生成执行计划时，会考虑索引，太多的索引会给查询优化器增加工作量，导致无法选择最优的查询方案；</p>
+<p>  16、分析索引效率</p>
+<p>  方法：在一般的SQL语句前加上explain；</p>
+<p>  分析结果的含义：</p>
+<p>  1）table：表名；</p>
+<p>  2）type：连接的类型，(ALL/Range/Ref)。其中ref是最理想的；</p>
+<p>  3）possible_keys：查询可以利用的索引名；</p>
+<p>  4）key：实际使用的索引；</p>
+<p>  5）key_len：索引中被使用部分的长度（字节）；</p>
+<p>  6）ref：显示列名字或者”const”（不明白什么意思）；</p>
+<p>  7）rows：显示MySQL认为在找到正确结果之前必须扫描的行数；</p>
+<p>  8）extra：MySQL的建议；</p>
+<p>  17、使用较短的定长列</p>
+<p>  1）尽可能使用较短的数据类型；</p>
+<p>  2）尽可能使用定长数据类型；</p>
+<p>  a）用char代替varchar，固定长度的数据处理比变长的快些；</p>
+<p>  b）对于频繁修改的表，磁盘容易形成碎片，从而影响数据库的整体性能；</p>
+<p>  c）万一出现数据表崩溃，使用固定长度数据行的表更容易重新构造。使用固定长度的数据行，每个记录的开始位置都是固定记录长度的倍数，可以很容易被检测到，但是使用可变长度的数据行就不一定了；</p>
+<p>  d）对于MyISAM类型的数据表，虽然转换成固定长度的数据列可以提高性能，但是占据的空间也大；</p>
+<p>  18、使用not null和enum</p>
+<p>  尽量将列定义为not null，这样可使数据的出来更快，所需的空间更少，而且在查询时，MySQL不需要检查是否存在特例，即null值，从而优化查询；</p>
+<p>  如果一列只含有有限数目的特定值，如性别，是否有效或者入学年份等，在这种情况下应该考虑将其转换为enum列的值，MySQL处理的更快，因为所有的enum值在系统内都是以标识数值来表示的；</p>
+<p>  19、使用optimize table</p>
+<p>  对于经常修改的表，容易产生碎片，使在查询数据库时必须读取更多的磁盘块，降低查询性能。具有可变长的表都存在磁盘碎片问题，这个问题对blob数据类型更为突出，因为其尺寸变化非常大。可以通过使用optimize table来整理碎片，保证数据库性能不下降，优化那些受碎片影响的数据表。 optimize table可以用于MyISAM和BDB类型的数据表。实际上任何碎片整理方法都是用mysqldump来转存数据表，然后使用转存后的文件并重新建数据表；</p>
+<p>  20、使用procedure analyse()</p>
+<p>  可以使用procedure analyse()显示最佳类型的建议，使用很简单，在select语句后面加上procedure analyse()就可以了；例如：</p>
+<p>  select * from students procedure analyse();</p>
+<p>  select * from students procedure analyse(16,256);</p>
+<p>  第二条语句要求procedure analyse()不要建议含有多于16个值，或者含有多于256字节的enum类型，如果没有限制，输出可能会很长；</p>
+<p>  21、使用查询缓存</p>
+<p>  1）查询缓存的工作方式：</p>
+<p>  第一次执行某条select语句时，服务器记住该查询的文本内容和查询结果，存储在缓存中，下次碰到这个语句时，直接从缓存中返回结果；当更新数据表后，该数据表的任何缓存查询都变成无效的，并且会被丢弃。</p>
+<p>  2）配置缓存参数：</p>
+<p>  变量：query_cache _type，查询缓存的操作模式。有3中模式，0：不缓存；1：缓存查询，除非与 select sql_no_cache开头；2：根据需要只缓存那些以select sql_cache开头的查询； query_cache_size：设置查询缓存的最大结果集的大小，比这个值大的不会被缓存。</p>
+<p>  22、调整硬件</p>
+<p>  1）在机器上装更多的内存；</p>
+<p>  2）增加更快的硬盘以减少I/O等待时间；</p>
+<p>  寻道时间是决定性能的主要因素，逐字地移动磁头是最慢的，一旦磁头定位，从磁道读则很快；</p>
+<p>  3）在不同的物理硬盘设备上重新分配磁盘活动；</p>
+<p>  如果可能，应将最繁忙的数据库存放在不同的物理设备上，这跟使用同一物理设备的不同分区是不同的，因为它们将争用相同的物理资源（磁头）。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年12月11日 18:06</p>
+        <p>原始链接： <a class="post-url" href="/2018/12/11/Mysql-基本命令/" title="Mysql 基本命令">http://blog.loyom.com/2018/12/11/Mysql-基本命令/</a></p>
+        <footer>
+            <a href="http://blog.loyom.com">
+                <img src="/images/logo.png" alt="kxvz">
+                kxvz
+            </a>
+        </footer>
+    </div>
+</div>
+
+            
+            
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我喝可乐~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+            
+        </div>
+        <footer class="article-footer">
+            
+            
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.loyom.com/2018/12/11/Mysql-基本命令/&title=《Mysql 基本命令》 — Kxvz Blog&pic=http://blog.loyom.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.loyom.com/2018/12/11/Mysql-基本命令/&title=《Mysql 基本命令》 — Kxvz Blog&source=Kxvz Blog Java Centos" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.loyom.com/2018/12/11/Mysql-基本命令/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Mysql 基本命令》 — Kxvz Blog&url=http://blog.loyom.com/2018/12/11/Mysql-基本命令/&via=http://blog.loyom.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.loyom.com/2018/12/11/Mysql-基本命令/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://blog.loyom.com/2018/12/11/Mysql-基本命令/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+            
+            <ul class="article-footer-menu">
+                
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/mysql/" class="color1">mysql</a>
+      
+    <a href="/tags/cmd/" class="color4">cmd</a>
+      
+  </li>
+
+            </ul>
+            
+        </footer>
+    </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/12/11/关于Mysql使用存储过程，并且使用游标的Demo/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          关于Mysql使用存储过程，并且使用游标的Demo
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/12/11/JavaScript之eval-函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JavaScript之eval() 函数</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <div id="comments">
+        <script>
+            var gitment = new Gitment({
+                owner: '45679032',
+                repo: 'https://github.com/kxvz/KxvzGitment.git',
+                oauth: {
+                    client_id: '01ae27293df20403837c',
+                    client_secret: '9348ee814a1b271f6ab8238f391fc8d024c5cceb',
+                },
+            })
+            gitment.render('comments')
+        </script>
+    </div>
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 kxvz<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://blog.loyom.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/C/">C#</a><a class="category-link" href="/categories/C/socket/">socket</a><a class="category-link" href="/categories/C/xml/">xml</a><a class="category-link" href="/categories/Centos/">Centos</a><a class="category-link" href="/categories/Centos/bash/">bash</a><a class="category-link" href="/categories/Centos/docker/">docker</a><a class="category-link" href="/categories/Centos/erlang/">erlang</a><a class="category-link" href="/categories/Centos/firewall/">firewall</a><a class="category-link" href="/categories/Centos/firewall/iptables/">iptables</a><a class="category-link" href="/categories/Centos/ip/">ip</a><a class="category-link" href="/categories/Centos/java/">java</a><a class="category-link" href="/categories/Centos/java/redis/">redis</a><a class="category-link" href="/categories/Centos/kafka/">kafka</a><a class="category-link" href="/categories/Centos/memcached/">memcached</a><a class="category-link" href="/categories/Centos/mongodb/">mongodb</a><a class="category-link" href="/categories/Centos/mount/">mount</a><a class="category-link" href="/categories/Centos/mount/disk/">disk</a><a class="category-link" href="/categories/Centos/mysql/">mysql</a><a class="category-link" href="/categories/Centos/mysql/java/">java</a><a class="category-link" href="/categories/Centos/network/">network</a><a class="category-link" href="/categories/Centos/nginx/">nginx</a><a class="category-link" href="/categories/Centos/nginx/ca/">ca</a><a class="category-link" href="/categories/Centos/ngrok/">ngrok</a><a class="category-link" href="/categories/Centos/ngrok/nat/">nat</a><a class="category-link" href="/categories/Centos/ntp/">ntp</a><a class="category-link" href="/categories/Centos/ntp/crontab/">crontab</a><a class="category-link" href="/categories/Centos/rabbitmq/">rabbitmq</a><a class="category-link" href="/categories/Centos/ruby/">ruby</a><a class="category-link" href="/categories/Centos/samba/">samba</a><a class="category-link" href="/categories/Centos/scala/">scala</a><a class="category-link" href="/categories/Centos/solr/">solr</a><a class="category-link" href="/categories/Centos/ssh/">ssh</a><a class="category-link" href="/categories/Centos/sync/">sync</a><a class="category-link" href="/categories/Centos/tars/">tars</a><a class="category-link" href="/categories/Centos/yum/">yum</a><a class="category-link" href="/categories/Centos/监控/">监控</a><a class="category-link" href="/categories/Shadowsocks/">Shadowsocks</a><a class="category-link" href="/categories/Shadowsocks/pac/">pac</a><a class="category-link" href="/categories/Shadowsocks/pac/proxy/">proxy</a><a class="category-link" href="/categories/android/">android</a><a class="category-link" href="/categories/android/activity/">activity</a><a class="category-link" href="/categories/centos/">centos</a><a class="category-link" href="/categories/centos/ssh/">ssh</a><a class="category-link" href="/categories/cmd/">cmd</a><a class="category-link" href="/categories/cmd/maven/">maven</a><a class="category-link" href="/categories/cmd/maven/localinstall/">localinstall</a><a class="category-link" href="/categories/eclipse/">eclipse</a><a class="category-link" href="/categories/exsi/">exsi</a><a class="category-link" href="/categories/exsi/ssh/">ssh</a><a class="category-link" href="/categories/exsi/ssh/disk/">disk</a><a class="category-link" href="/categories/game/">game</a><a class="category-link" href="/categories/game/游戏类别/">游戏类别</a><a class="category-link" href="/categories/glassfish/">glassfish</a><a class="category-link" href="/categories/java/">java</a><a class="category-link" href="/categories/java/Spring/">Spring</a><a class="category-link" href="/categories/java/Spring/dubbo/">dubbo</a><a class="category-link" href="/categories/java/Spring/websocket/">websocket</a><a class="category-link" href="/categories/java/activemq/">activemq</a><a class="category-link" href="/categories/java/aes/">aes</a><a class="category-link" href="/categories/java/aes/jce/">jce</a><a class="category-link" href="/categories/java/excel/">excel</a><a class="category-link" href="/categories/java/excel/poi/">poi</a><a class="category-link" href="/categories/java/http/">http</a><a class="category-link" href="/categories/java/httpclient/">httpclient</a><a class="category-link" href="/categories/java/image/">image</a><a class="category-link" href="/categories/java/jmap/">jmap</a><a class="category-link" href="/categories/java/jmap/jstack/">jstack</a><a class="category-link" href="/categories/java/mail/">mail</a><a class="category-link" href="/categories/java/map/">map</a><a class="category-link" href="/categories/java/maven/">maven</a><a class="category-link" href="/categories/java/maven/jar/">jar</a><a class="category-link" href="/categories/java/protobuf/">protobuf</a><a class="category-link" href="/categories/java/readpost/">readpost</a><a class="category-link" href="/categories/java/redis/">redis</a><a class="category-link" href="/categories/java/redis/RedisSerializer/">RedisSerializer</a><a class="category-link" href="/categories/java/rocketmq/">rocketmq</a><a class="category-link" href="/categories/java/spring/">spring</a><a class="category-link" href="/categories/java/spring/resources/">resources</a><a class="category-link" href="/categories/java/test/">test</a><a class="category-link" href="/categories/java/web/">web</a><a class="category-link" href="/categories/java/web/dwr/">dwr</a><a class="category-link" href="/categories/java/反射/">反射</a><a class="category-link" href="/categories/java/录音/">录音</a><a class="category-link" href="/categories/js/">js</a><a class="category-link" href="/categories/js/angularjs/">angularjs</a><a class="category-link" href="/categories/js/eval/">eval</a><a class="category-link" href="/categories/maven/">maven</a><a class="category-link" href="/categories/maven/java/">java</a><a class="category-link" href="/categories/maven/java/install/">install</a><a class="category-link" href="/categories/maven/setting/">setting</a><a class="category-link" href="/categories/mysql/">mysql</a><a class="category-link" href="/categories/mysql/blob/">blob</a><a class="category-link" href="/categories/mysql/cmd/">cmd</a><a class="category-link" href="/categories/mysql/host/">host</a><a class="category-link" href="/categories/mysql/master-slave/">master-slave</a><a class="category-link" href="/categories/mysql/mysqldump/">mysqldump</a><a class="category-link" href="/categories/mysql/resetpass/">resetpass</a><a class="category-link" href="/categories/mysql/外键/">外键</a><a class="category-link" href="/categories/mysql/游标/">游标</a><a class="category-link" href="/categories/netbeans/">netbeans</a><a class="category-link" href="/categories/netbeans/tomcat/">tomcat</a><a class="category-link" href="/categories/nginx/">nginx</a><a class="category-link" href="/categories/nodejs/">nodejs</a><a class="category-link" href="/categories/nodejs/nrm/">nrm</a><a class="category-link" href="/categories/nodejs/nrm/npm/">npm</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/scp/">scp</a><a class="category-link" href="/categories/solid/">solid</a><a class="category-link" href="/categories/sql/">sql</a><a class="category-link" href="/categories/tomcat/">tomcat</a><a class="category-link" href="/categories/ubuntu/">ubuntu</a><a class="category-link" href="/categories/windows/">windows</a><a class="category-link" href="/categories/windows/bluestacks/">bluestacks</a><a class="category-link" href="/categories/windows/cmd/">cmd</a><a class="category-link" href="/categories/windows/cmd/chm/">chm</a><a class="category-link" href="/categories/windows/cmd/disk/">disk</a><a class="category-link" href="/categories/windows/cmd/netframwork/">netframwork</a><a class="category-link" href="/categories/windows/defender/">defender</a><a class="category-link" href="/categories/windows/firewall/">firewall</a><a class="category-link" href="/categories/windows/firewall/port/">port</a><a class="category-link" href="/categories/windows/port/">port</a><a class="category-link" href="/categories/代码/">代码</a><a class="category-link" href="/categories/代码/tensorflow/">tensorflow</a><a class="category-link" href="/categories/代码/tensorflow/python/">python</a><a class="category-link" href="/categories/代码/tensorflow/python/whl/">whl</a><a class="category-link" href="/categories/功率/">功率</a><a class="category-link" href="/categories/功率/负荷/">负荷</a><a class="category-link" href="/categories/幂等性/">幂等性</a><a class="category-link" href="/categories/幂等性/restful/">restful</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/AVX2/" style="font-size: 10px;">AVX2</a> <a href="/tags/ArgumentCaptor/" style="font-size: 10px;">ArgumentCaptor</a> <a href="/tags/C/" style="font-size: 11.43px;">C#</a> <a href="/tags/CPU监控/" style="font-size: 10px;">CPU监控</a> <a href="/tags/Centos/" style="font-size: 20px;">Centos</a> <a href="/tags/RedisSerializer/" style="font-size: 10px;">RedisSerializer</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringWebSocket/" style="font-size: 10px;">SpringWebSocket</a> <a href="/tags/WebSocket/" style="font-size: 10px;">WebSocket</a> <a href="/tags/activemq/" style="font-size: 10px;">activemq</a> <a href="/tags/activity/" style="font-size: 10px;">activity</a> <a href="/tags/aes/" style="font-size: 10px;">aes</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angularjs/" style="font-size: 10px;">angularjs</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/asadmin/" style="font-size: 10px;">asadmin</a> <a href="/tags/audiorecord/" style="font-size: 10px;">audiorecord</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/blob/" style="font-size: 10px;">blob</a> <a href="/tags/bluestacks/" style="font-size: 10px;">bluestacks</a> <a href="/tags/build/" style="font-size: 10px;">build</a> <a href="/tags/ca/" style="font-size: 10px;">ca</a> <a href="/tags/catalina/" style="font-size: 10px;">catalina</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/chm/" style="font-size: 10px;">chm</a> <a href="/tags/cmd/" style="font-size: 17.14px;">cmd</a> <a href="/tags/crontab/" style="font-size: 10px;">crontab</a> <a href="/tags/decompile/" style="font-size: 10px;">decompile</a> <a href="/tags/defender/" style="font-size: 10px;">defender</a> <a href="/tags/disk/" style="font-size: 14.29px;">disk</a> <a href="/tags/dism/" style="font-size: 10px;">dism</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/dubbo/" style="font-size: 10px;">dubbo</a> <a href="/tags/dump/" style="font-size: 10px;">dump</a> <a href="/tags/dwr/" style="font-size: 10px;">dwr</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/erlang/" style="font-size: 10px;">erlang</a> <a href="/tags/eval/" style="font-size: 10px;">eval</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/exsi/" style="font-size: 10px;">exsi</a> <a href="/tags/fastjson/" style="font-size: 10px;">fastjson</a> <a href="/tags/firewall/" style="font-size: 10px;">firewall</a> <a href="/tags/firewall-cmd/" style="font-size: 12.86px;">firewall-cmd</a> <a href="/tags/font-size/" style="font-size: 10px;">font-size</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/glassfish/" style="font-size: 10px;">glassfish</a> <a href="/tags/gpt/" style="font-size: 10px;">gpt</a> <a href="/tags/hh/" style="font-size: 10px;">hh</a> <a href="/tags/host/" style="font-size: 10px;">host</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/httpclient/" style="font-size: 10px;">httpclient</a> <a href="/tags/ifcfg/" style="font-size: 10px;">ifcfg</a> <a href="/tags/image/" style="font-size: 10px;">image</a> <a href="/tags/install/" style="font-size: 15.71px;">install</a> <a href="/tags/invoke/" style="font-size: 10px;">invoke</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/jar/" style="font-size: 11.43px;">jar</a> <a href="/tags/java/" style="font-size: 18.57px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jce/" style="font-size: 10px;">jce</a> <a href="/tags/jmap/" style="font-size: 10px;">jmap</a> <a href="/tags/js/" style="font-size: 11.43px;">js</a> <a href="/tags/jstack/" style="font-size: 10px;">jstack</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/keyboardInterrupt/" style="font-size: 10px;">keyboardInterrupt</a> <a href="/tags/localinstall/" style="font-size: 10px;">localinstall</a> <a href="/tags/mail/" style="font-size: 10px;">mail</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/master/" style="font-size: 10px;">master</a> <a href="/tags/maven/" style="font-size: 14.29px;">maven</a> <a href="/tags/mbr/" style="font-size: 10px;">mbr</a> <a href="/tags/memcached/" style="font-size: 10px;">memcached</a> <a href="/tags/mklink/" style="font-size: 10px;">mklink</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/mount/" style="font-size: 11.43px;">mount</a> <a href="/tags/mysql/" style="font-size: 17.14px;">mysql</a> <a href="/tags/mysqldump/" style="font-size: 10px;">mysqldump</a> <a href="/tags/nat/" style="font-size: 11.43px;">nat</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/netframework3-5/" style="font-size: 10px;">netframework3.5</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nginx/" style="font-size: 12.86px;">nginx</a> <a href="/tags/ngrok/" style="font-size: 10px;">ngrok</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/nrm/" style="font-size: 10px;">nrm</a> <a href="/tags/ntp/" style="font-size: 10px;">ntp</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pac/" style="font-size: 10px;">pac</a> <a href="/tags/partition/" style="font-size: 10px;">partition</a> <a href="/tags/path/" style="font-size: 10px;">path</a> <a href="/tags/pip-install/" style="font-size: 11.43px;">pip install</a> <a href="/tags/poi/" style="font-size: 10px;">poi</a> <a href="/tags/port/" style="font-size: 12.86px;">port</a> <a href="/tags/post/" style="font-size: 10px;">post</a> <a href="/tags/producer/" style="font-size: 10px;">producer</a> <a href="/tags/protobuf/" style="font-size: 10px;">protobuf</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/redis/" style="font-size: 12.86px;">redis</a> <a href="/tags/redis-cli/" style="font-size: 10px;">redis-cli</a> <a href="/tags/regedit/" style="font-size: 10px;">regedit</a> <a href="/tags/request/" style="font-size: 10px;">request</a> <a href="/tags/resetpass/" style="font-size: 10px;">resetpass</a> <a href="/tags/resources/" style="font-size: 10px;">resources</a> <a href="/tags/restful/" style="font-size: 10px;">restful</a> <a href="/tags/rocketmq/" style="font-size: 10px;">rocketmq</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/samba/" style="font-size: 10px;">samba</a> <a href="/tags/scala/" style="font-size: 10px;">scala</a> <a href="/tags/scp/" style="font-size: 10px;">scp</a> <a href="/tags/server-xml/" style="font-size: 10px;">server.xml</a> <a href="/tags/setting/" style="font-size: 10px;">setting</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/slave/" style="font-size: 10px;">slave</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/solid/" style="font-size: 10px;">solid</a> <a href="/tags/solr/" style="font-size: 10px;">solr</a> <a href="/tags/spring-boot/" style="font-size: 12.86px;">spring-boot</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ssh/" style="font-size: 11.43px;">ssh</a> <a href="/tags/ssh-keygen/" style="font-size: 10px;">ssh-keygen</a> <a href="/tags/sync/" style="font-size: 10px;">sync</a> <a href="/tags/tars/" style="font-size: 10px;">tars</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tomcat/" style="font-size: 12.86px;">tomcat</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/webaoo/" style="font-size: 10px;">webaoo</a> <a href="/tags/whl/" style="font-size: 10px;">whl</a> <a href="/tags/windows/" style="font-size: 15.71px;">windows</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/主从/" style="font-size: 10px;">主从</a> <a href="/tags/内存监控/" style="font-size: 10px;">内存监控</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/功率/" style="font-size: 10px;">功率</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a> <a href="/tags/外键/" style="font-size: 10px;">外键</a> <a href="/tags/幂等性/" style="font-size: 10px;">幂等性</a> <a href="/tags/录音/" style="font-size: 10px;">录音</a> <a href="/tags/游戏类别/" style="font-size: 10px;">游戏类别</a> <a href="/tags/游标/" style="font-size: 10px;">游标</a> <a href="/tags/系统监控/" style="font-size: 10px;">系统监控</a> <a href="/tags/系统脚本/" style="font-size: 10px;">系统脚本</a> <a href="/tags/负荷/" style="font-size: 10px;">负荷</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/AVX2/" style="font-size: 10px;">AVX2</a> <a href="/tags/ArgumentCaptor/" style="font-size: 10px;">ArgumentCaptor</a> <a href="/tags/C/" style="font-size: 11.43px;">C#</a> <a href="/tags/CPU监控/" style="font-size: 10px;">CPU监控</a> <a href="/tags/Centos/" style="font-size: 20px;">Centos</a> <a href="/tags/RedisSerializer/" style="font-size: 10px;">RedisSerializer</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/SpringWebSocket/" style="font-size: 10px;">SpringWebSocket</a> <a href="/tags/WebSocket/" style="font-size: 10px;">WebSocket</a> <a href="/tags/activemq/" style="font-size: 10px;">activemq</a> <a href="/tags/activity/" style="font-size: 10px;">activity</a> <a href="/tags/aes/" style="font-size: 10px;">aes</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/angularjs/" style="font-size: 10px;">angularjs</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/asadmin/" style="font-size: 10px;">asadmin</a> <a href="/tags/audiorecord/" style="font-size: 10px;">audiorecord</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/blob/" style="font-size: 10px;">blob</a> <a href="/tags/bluestacks/" style="font-size: 10px;">bluestacks</a> <a href="/tags/build/" style="font-size: 10px;">build</a> <a href="/tags/ca/" style="font-size: 10px;">ca</a> <a href="/tags/catalina/" style="font-size: 10px;">catalina</a> <a href="/tags/centos/" style="font-size: 10px;">centos</a> <a href="/tags/chm/" style="font-size: 10px;">chm</a> <a href="/tags/cmd/" style="font-size: 17.14px;">cmd</a> <a href="/tags/crontab/" style="font-size: 10px;">crontab</a> <a href="/tags/decompile/" style="font-size: 10px;">decompile</a> <a href="/tags/defender/" style="font-size: 10px;">defender</a> <a href="/tags/disk/" style="font-size: 14.29px;">disk</a> <a href="/tags/dism/" style="font-size: 10px;">dism</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/dubbo/" style="font-size: 10px;">dubbo</a> <a href="/tags/dump/" style="font-size: 10px;">dump</a> <a href="/tags/dwr/" style="font-size: 10px;">dwr</a> <a href="/tags/eclipse/" style="font-size: 10px;">eclipse</a> <a href="/tags/erlang/" style="font-size: 10px;">erlang</a> <a href="/tags/eval/" style="font-size: 10px;">eval</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/exsi/" style="font-size: 10px;">exsi</a> <a href="/tags/fastjson/" style="font-size: 10px;">fastjson</a> <a href="/tags/firewall/" style="font-size: 10px;">firewall</a> <a href="/tags/firewall-cmd/" style="font-size: 12.86px;">firewall-cmd</a> <a href="/tags/font-size/" style="font-size: 10px;">font-size</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/glassfish/" style="font-size: 10px;">glassfish</a> <a href="/tags/gpt/" style="font-size: 10px;">gpt</a> <a href="/tags/hh/" style="font-size: 10px;">hh</a> <a href="/tags/host/" style="font-size: 10px;">host</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/httpclient/" style="font-size: 10px;">httpclient</a> <a href="/tags/ifcfg/" style="font-size: 10px;">ifcfg</a> <a href="/tags/image/" style="font-size: 10px;">image</a> <a href="/tags/install/" style="font-size: 15.71px;">install</a> <a href="/tags/invoke/" style="font-size: 10px;">invoke</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/jar/" style="font-size: 11.43px;">jar</a> <a href="/tags/java/" style="font-size: 18.57px;">java</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jce/" style="font-size: 10px;">jce</a> <a href="/tags/jmap/" style="font-size: 10px;">jmap</a> <a href="/tags/js/" style="font-size: 11.43px;">js</a> <a href="/tags/jstack/" style="font-size: 10px;">jstack</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/keyboardInterrupt/" style="font-size: 10px;">keyboardInterrupt</a> <a href="/tags/localinstall/" style="font-size: 10px;">localinstall</a> <a href="/tags/mail/" style="font-size: 10px;">mail</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/master/" style="font-size: 10px;">master</a> <a href="/tags/maven/" style="font-size: 14.29px;">maven</a> <a href="/tags/mbr/" style="font-size: 10px;">mbr</a> <a href="/tags/memcached/" style="font-size: 10px;">memcached</a> <a href="/tags/mklink/" style="font-size: 10px;">mklink</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/mount/" style="font-size: 11.43px;">mount</a> <a href="/tags/mysql/" style="font-size: 17.14px;">mysql</a> <a href="/tags/mysqldump/" style="font-size: 10px;">mysqldump</a> <a href="/tags/nat/" style="font-size: 11.43px;">nat</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/netframework3-5/" style="font-size: 10px;">netframework3.5</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/nginx/" style="font-size: 12.86px;">nginx</a> <a href="/tags/ngrok/" style="font-size: 10px;">ngrok</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/nrm/" style="font-size: 10px;">nrm</a> <a href="/tags/ntp/" style="font-size: 10px;">ntp</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pac/" style="font-size: 10px;">pac</a> <a href="/tags/partition/" style="font-size: 10px;">partition</a> <a href="/tags/path/" style="font-size: 10px;">path</a> <a href="/tags/pip-install/" style="font-size: 11.43px;">pip install</a> <a href="/tags/poi/" style="font-size: 10px;">poi</a> <a href="/tags/port/" style="font-size: 12.86px;">port</a> <a href="/tags/post/" style="font-size: 10px;">post</a> <a href="/tags/producer/" style="font-size: 10px;">producer</a> <a href="/tags/protobuf/" style="font-size: 10px;">protobuf</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/redis/" style="font-size: 12.86px;">redis</a> <a href="/tags/redis-cli/" style="font-size: 10px;">redis-cli</a> <a href="/tags/regedit/" style="font-size: 10px;">regedit</a> <a href="/tags/request/" style="font-size: 10px;">request</a> <a href="/tags/resetpass/" style="font-size: 10px;">resetpass</a> <a href="/tags/resources/" style="font-size: 10px;">resources</a> <a href="/tags/restful/" style="font-size: 10px;">restful</a> <a href="/tags/rocketmq/" style="font-size: 10px;">rocketmq</a> <a href="/tags/ruby/" style="font-size: 10px;">ruby</a> <a href="/tags/samba/" style="font-size: 10px;">samba</a> <a href="/tags/scala/" style="font-size: 10px;">scala</a> <a href="/tags/scp/" style="font-size: 10px;">scp</a> <a href="/tags/server-xml/" style="font-size: 10px;">server.xml</a> <a href="/tags/setting/" style="font-size: 10px;">setting</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/slave/" style="font-size: 10px;">slave</a> <a href="/tags/socket/" style="font-size: 10px;">socket</a> <a href="/tags/solid/" style="font-size: 10px;">solid</a> <a href="/tags/solr/" style="font-size: 10px;">solr</a> <a href="/tags/spring-boot/" style="font-size: 12.86px;">spring-boot</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/ssh/" style="font-size: 11.43px;">ssh</a> <a href="/tags/ssh-keygen/" style="font-size: 10px;">ssh-keygen</a> <a href="/tags/sync/" style="font-size: 10px;">sync</a> <a href="/tags/tars/" style="font-size: 10px;">tars</a> <a href="/tags/tensorflow/" style="font-size: 10px;">tensorflow</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tomcat/" style="font-size: 12.86px;">tomcat</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/web/" style="font-size: 10px;">web</a> <a href="/tags/webaoo/" style="font-size: 10px;">webaoo</a> <a href="/tags/whl/" style="font-size: 10px;">whl</a> <a href="/tags/windows/" style="font-size: 15.71px;">windows</a> <a href="/tags/xml/" style="font-size: 10px;">xml</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/主从/" style="font-size: 10px;">主从</a> <a href="/tags/内存监控/" style="font-size: 10px;">内存监控</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/功率/" style="font-size: 10px;">功率</a> <a href="/tags/反向代理/" style="font-size: 10px;">反向代理</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a> <a href="/tags/外键/" style="font-size: 10px;">外键</a> <a href="/tags/幂等性/" style="font-size: 10px;">幂等性</a> <a href="/tags/录音/" style="font-size: 10px;">录音</a> <a href="/tags/游戏类别/" style="font-size: 10px;">游戏类别</a> <a href="/tags/游标/" style="font-size: 10px;">游标</a> <a href="/tags/系统监控/" style="font-size: 10px;">系统监控</a> <a href="/tags/系统脚本/" style="font-size: 10px;">系统脚本</a> <a href="/tags/负荷/" style="font-size: 10px;">负荷</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
